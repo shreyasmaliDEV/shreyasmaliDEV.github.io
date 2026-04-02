@@ -386,6 +386,9 @@ span{
     margin-bottom: 1rem;
 }
 
+#more-education {
+    display: none;
+}
 .read-more-btn {
     display: inline-block;
     padding: 0.8rem 2rem;
