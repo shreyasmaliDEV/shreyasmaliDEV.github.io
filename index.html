@@ -337,25 +337,24 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="#">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Email">
-                </div>
+        <form id="contact-form">
+    <div class="input-group">
+        <div class="input-box">
+            <input type="text" name="from_name" placeholder="Full Name" required>
+            <input type="email" name="from_email" placeholder="Email" required>
+        </div>
 
-                <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
-                </div>
+        <div class="input-box">
+            <input type="number" name="phone" placeholder="Phone Number">
+            <input type="text" name="subject" placeholder="Subject" required>
+        </div>
+    </div>
 
-            </div>
-
-            <div class="input-group-2">
-                <textarea name="message" cols=10 rows="10" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Send Message" class="btn">
-            </div>
-        </form>
+    <div class="input-group-2">
+        <textarea name="message" cols="10" rows="10" placeholder="Your Message" required></textarea>
+        <input type="submit" value="Send Message" class="btn">
+    </div>
+</form>
     </section>
 
     <footer class="footer">
@@ -403,12 +402,16 @@
     </footer>
     <script src="script.js"></script>
 
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("uGOt9KWavCL3OOcGh"); // Replace with your EmailJS public key
-        })();
-    </script>
+   <!-- 1. Load EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+
+<!-- 2. Initialize EmailJS -->
+<script type="text/javascript">
+    emailjs.init("YOUR_PUBLIC_KEY"); // replace with your EmailJS public key
+</script>
+
+<!-- 3. Then load your own JS file -->
+<script src="contact.js"></script>
 
 </body>
 </html>
