@@ -912,16 +912,13 @@ span{
 }
 
 .footer-counter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
     color: var(--main-color);
-    font-size: 1.6rem;
 }
 
-.footer-counter img {
-    height: 2.5rem; /* adjust size of counter badge */
-    border-radius: 1rem;
+.footer-counter p {
+    display: inline-block;
+    margin-right: 0.8rem;
 }

@@ -57,9 +57,10 @@ menuIcon.onclick = () => {
 window.onload = function() {
     const countElement = document.getElementById("visitor-count");
 
-    fetch('https://api.countapi.xyz/hit/shreyasmaliDEV.github.io/visitors')
+    fetch('https://api.countapi.xyz/hit/shreyasmaliDEV/github.io/visitors')
         .then(response => response.json())
         .then(data => {
+            console.log(data); // check the API response
             countElement.innerText = data.value;
         })
         .catch(err => {
