@@ -905,6 +905,128 @@ span{
     grid-template-columns: repeat(3, 1fr);
 }
 /* ------------------------------------------------------------------------------------- */
+/* Experience Section */
+/* ------------------ EXPERIENCE SECTION ------------------ */
+/* Experience Section */
+.experience {
+    padding: 80px 20px;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+.experience h2.heading {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 60px;
+    color: var(--main-color);
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Experience Card */
+.experience-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 25px;
+    border-radius: 20px;
+    border: 2px solid var(--main-color);
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.experience-card:hover {
+    box-shadow: 0 0 15px var(--main-color),
+                0 0 30px var(--main-color),
+                0 0 60px var(--main-color);
+    transform: translateY(-5px);
+}
+
+/* Logo */
+.experience-logo-container {
+    flex-shrink: 0;
+}
+
+.experience-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+/* Info */
+.experience-info h3 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.company-duration {
+    font-size: 1.8rem;
+    color: var(--main-color);
+    margin: 5px 0;
+}
+
+.position {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/* Hover effect for position like skills glow */
+.experience-card:hover .position {
+    text-shadow: 
+        0 0 10px var(--main-color),
+        0 0 20px var(--main-color),
+        0 0 40px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+
+.experience-info ul {
+    padding-left: 20px;
+    margin: 0;
+    list-style-type: disc;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 768px) {
+    .experience-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .experience-logo-container {
+        margin-bottom: 15px;
+    }
+
+    .experience-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .company-duration {
+        font-size: 1.5rem;
+    }
+
+    .position {
+        font-size: 1.4rem;
+    }
+
+    .experience-info ul {
+        font-size: 1.3rem;
+    }
+}
+/* --------------------------------------------------------------------------------------------- */
 
 .home-img img,
 .about-img img {
