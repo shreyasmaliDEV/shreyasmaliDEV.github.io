@@ -910,3 +910,18 @@ span{
     object-fit: cover;  /* maintain proper image fit */
     border-radius: 50%; /* perfect circle */
 }
+
+.footer-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    color: var(--main-color);
+    font-size: 1.6rem;
+}
+
+.footer-counter img {
+    height: 2.5rem; /* adjust size of counter badge */
+    border-radius: 1rem;
+}

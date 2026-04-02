@@ -53,3 +53,16 @@ menuIcon.onclick = () => {
         alert("Failed to send message. Please try again.\n" + JSON.stringify(error));
       });
   });
+
+window.onload = function() {
+    const countElement = document.getElementById("visitor-count");
+
+    fetch('https://api.countapi.xyz/hit/shreyasmaliDEV.github.io/visitors')
+        .then(response => response.json())
+        .then(data => {
+            countElement.innerText = data.value;
+        })
+        .catch(err => {
+            console.error("Visitor count error:", err);
+        });
+};
